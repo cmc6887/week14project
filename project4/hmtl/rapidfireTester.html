@@ -8,13 +8,13 @@
     </head>
     
     <body>
-        <h1>Rapid Fire Tester</h1>
-        <p id="Hiscore"></p>
-        <p id="score"></p>
+        <h1>Rapid Fire Tester</h1>     
 	    <h2 id=startButton>Start</h2>
+        <p id="Hiscore"></p>
+        <p id="score"></p>  
         <p id="timer"></p>
 		<div id="box"><img class="target" src="RapidFireCircle.svg" height="250" width="250" alt="RapidFireTester"></div> 
-        
+         
         <script>
             
              //create variables
@@ -27,6 +27,8 @@
 
             
              document.getElementById("startButton").onclick=function() {
+                  document.getElementById("startButton").style.backgroundColor = "#FFFFFF";
+                 document.getElementById("startButton").style.color = "#9dadbd";
                  timeLeft = 30;
                  score = 0;
                  document.getElementById("score").innerHTML="Your Score is: " + score;
@@ -61,6 +63,8 @@
                 if (timeLeft == 0) {
                     clearTimeout(timerId);
                     //stop game
+                    document.getElementById("startButton").style.backgroundColor = "#9dadbd";
+                    document.getElementById("startButton").style.color = "#FFFFFF";
                     elem.innerHTML = "The Time has run out. Click Start To Start again."
                     document.getElementById("box").style.display="none";
                 } else {
