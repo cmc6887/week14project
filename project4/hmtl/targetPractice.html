@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="layout4.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Cameron Chin Final Project</title>
+    </head>
+    
+    <body>
+        <h1>Target Practice</h1>
+        <p id="score"></p>
+        
+		<div id="box"><img class="target" src="Target.svg" height="100" width="100" alt="RapidFireTester"></div>
+         
+        
+        <script>
+		
+            //create variables 
+            var score = 0;
+            
+            var timeLeft = 4;
+            //var elem = document.getElementById("timer");
+            var timerId = setInterval(countdown, 1000);
+            
+			function makeBox() {
+                    timeLeft = 4;
+                    timerId = setInterval(countdown, 1000);
+					//var time=Math.random();
+					//time=time*3000;
+				
+                    //where it will spawn
+					var top= Math.random();
+						//virtically
+                        top= top*(window.innerHeight-190);
+					var left= Math.random();
+						//horizontally
+                        left= left*(window.innerWidth-150); 
+						
+					document.getElementById("box").style.top = top + "px";
+					document.getElementById("box").style.left = left + "px"; 
+				
+					document.getElementById("box").style.display="block";
+				
+			
+			}
+			
+            //if player hits target
+			document.getElementById("box").onclick=function() {
+                timeLeft = 4;
+                score++;
+				document.getElementById("score").innerHTML="Your Score is: " + score;
+				this.style.display="none";
+				makeBox();
+						
+			}
+            
+            //timer to teleport target
+            
+            function countdown() {
+                if (timeLeft == 0) {
+                    clearTimeout(timerId);
+                    timeLeft = 4;
+                    makeBox();          
+                } else {
+                   // elem.innerHTML = window.innerWidth+"x" +window.innerHeight;
+                    timeLeft--;
+                }
+            }
+            
+            
+			makeBox(); 
+        </script>
+    </body>
+</html>

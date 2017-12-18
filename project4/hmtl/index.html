@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="layout.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Cameron Chin Final Project</title>
+    </head>
+    
+    <body>
+        <h1>Cameron Chin's IGME 230 Final Project</h1>
+        <h2 class="description">It's time to get better at FPS games! Play anyone of these training exercises to improve your skills in FPS games such as Counter Strike: Global Offensive!</h2>
+        
+        <!-- Content -->
+        <div id="container">
+            
+            
+            <!-- left -->
+            <div class="item">
+                <div id="left">                   
+                     <a href="reactionTester.html"><img class="reactiontesticon" src="ReactionTesterIcon.png" height="250" width="250" alt="ReactionTester"></a>   
+                </div>
+                <h3><a id="showDetails1">
+                            How to Play?
+                            </a></h3>
+                <div id="RectionTestDetails">
+                            <span class ="RectionTestDetails"> For this test, when the button appears click it as soon as you can.
+                            </span>    
+                </div>
+            </div>
+            
+            
+            
+            <!-- middle -->
+             <div class="item">
+                <div id="middle">                   
+                    <a href="rapidfireTester.html"><img class="rapidfiretesticon" src="RapidFireTesterIcon.png" height="250" width="250" alt="RapidFireTester"></a>    
+                </div>
+                <h3><a id="showDetails2">
+                            How to Play?
+                            </a></h3>
+                <div id="RapidFireTestDetails">
+                            <span class ="RapidFireTestDetails"> For this test, press the green button when it appears as many times as you can.
+                            </span>    
+                </div>
+            </div>
+            
+            
+            
+            <!-- right -->
+            <div class="item">
+                <div id="right">                   
+                    <a href="targetPractice.html"><img class="targetpractice" src="TargetPracticeIcon.png" height="250" width="250" alt="ReactionTest"> </a>         
+                </div>
+                <h3><a id="showDetails3">
+                            How to Play?
+                            </a></h3>
+                <div id="TargetPracticeDetails">
+                            <span class ="TargetPracticeDetails"> Practice your aim by clicking the target that randomly moves. The higher your score gets, the faster the target moves.
+                            </span>    
+                </div>
+            </div>
+            
+            
+        </div>
+        
+         <h3><a href="documentation.html"> Documentation</a></h3>
+        
+        <script>
+            document.getElementById("showDetails1").onclick = function() {
+                document.getElementById("RectionTestDetails").style.display= "block";
+            }
+            
+            /*Makes when clicking on about me shows info about me*/
+            document.getElementById("showDetails2").onclick = function() {
+                document.getElementById("RapidFireTestDetails").style.display= "block";
+            }
+            /*Makes when clicking on My projects shows my projects*/
+            document.getElementById("showDetails3").onclick = function() {
+                document.getElementById("TargetPracticeDetails").style.display= "block";
+            }      
+        </script>
+    </body>
+</html>

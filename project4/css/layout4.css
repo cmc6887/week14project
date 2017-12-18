@@ -1,0 +1,41 @@
+/*This imports both the Anton and Open Sans fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans');
+
+
+body {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    color: #eeeeee;
+    background-image: url("dust2.png");
+    background-size: auto;
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+    font-size: 45px;
+}
+
+h2{
+    border-radius: 10px;
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+}
+
+#box {
+				width: 100px;
+				height: 100px;
+				display: none;
+				position: relative; 
+		}
+
+p {
+    font-size: 25px;
+}

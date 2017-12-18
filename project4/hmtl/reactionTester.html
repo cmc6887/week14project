@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="layout2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Cameron Chin Final Project</title>
+    </head>
+    
+    <body>
+        <h1>Reaction Tester</h1>
+        <h2 id=startButton>Start</h2>
+        <p id="bestReactionTime"></p>
+        <p id="printReactionTime"></p>
+		<div id="box"><img id ="target" class="target" src="ReactionCircle.svg" height="250" width="250" alt="RapidFireTester"></div>     
+        <script>
+            //clicking start button
+            document.getElementById("startButton").onclick=function() {
+                document.getElementById("startButton").style.backgroundColor = "#FFFFFF";
+                document.getElementById("startButton").style.color = "#9dadbd";
+                document.getElementById("bestReactionTime").innerHTML="A green circle will now keep on randomly appearing. Click it to see your reaction times.";
+                document.getElementById("printReactionTime").innerHTML="(You do not need to press ''start'' again)";
+                
+                makeBox();
+            }
+            //create variables
+			var clickedTime; 
+            var createdTime; 
+            var reactionTime; 
+            var bestRecordReactionTime = 400;
+            
+			function makeBox() {
+					var time=Math.random();
+					time=time*4000;
+				
+				setTimeout(function() {
+				
+					document.getElementById("box").style.display="block";
+					
+					createdTime=Date.now();
+					
+				}, time); 
+			
+			}
+			
+			document.getElementById("box").onclick=function() {
+			
+				clickedTime=Date.now();
+				
+				reactionTime=(clickedTime-createdTime)/1000;
+				
+				document.getElementById("printReactionTime").innerHTML="Your last Reaction Time was: " + reactionTime + " seconds";
+                if(bestRecordReactionTime>reactionTime)
+                    {
+                        bestRecordReactionTime = reactionTime;
+                        document.getElementById("bestReactionTime").innerHTML="Your Fastest Reaction Time Record is: " + bestRecordReactionTime + " seconds";
+                    }
+				
+				this.style.display="none";
+				
+				makeBox();
+							
+			}
+            
+        </script>
+    </body>
+</html>

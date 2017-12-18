@@ -1,0 +1,104 @@
+/*This imports both the Anton and Open Sans fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans');
+
+
+body {
+    background-color: #9dadbd;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    color: #eeeeee;
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+    font-size: 45px;
+}
+
+h3{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+}
+
+
+h3:hover {
+    border-radius: 10px;
+    background-color: #eeeeee;
+    color: #9dadbd;
+}
+
+.description {
+    margin: auto;
+    padding: 3px 20px 3px 20px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+    border-style:hidden;
+}
+
+#container {
+    padding-top: 230px;
+    padding-bottom: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 250px;
+    height: 350px;
+    margin: 0px 20px 0px 20px;
+    text-align: center;
+}
+
+
+img {
+    height: 250px;
+    width: 250px;
+    
+    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+img:hover {
+    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+
+a {
+    display: block;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+
+    
+    -webkit-transition: 1s; /* Chrome,Safari,Firefox */
+    transition: 1s;
+}
+
+
+
+
+
+/* How to Tutorials */
+#RectionTestDetails{
+    display: none;
+}
+
+#RapidFireTestDetails{
+    display: none;
+}
+
+#TargetPracticeDetails{
+    display: none;
+}

@@ -1,0 +1,70 @@
+/*This imports both the Anton and Open Sans fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans');
+
+
+body {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    color: #eeeeee;
+    background-image: url("cobblestone.png");
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+    font-size: 45px;
+}
+
+h2{
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    text-align: center
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+}
+
+
+a {
+    display: block;
+    border-radius: 10px;
+    border-color: #eeeeee;
+    border-style: solid;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #eeeeee;
+    
+    -webkit-transition: .5s; /* Safari */
+    transition: .5s;
+}
+
+h2:hover {
+    border-radius: 10px;
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+    color: #9dadbd;
+}
+
+
+
+#box {
+                padding-top: 50px;
+                margin: auto;
+				width:  250px;
+				height: 250px;
+				display: none;
+				position: relative; 
+		}
+p {
+    font-size: 25px;
+}

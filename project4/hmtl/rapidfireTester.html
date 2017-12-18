@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="layout3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Cameron Chin Final Project</title>
+    </head>
+    
+    <body>
+        <h1>Rapid Fire Tester</h1>
+        <p id="Hiscore"></p>
+        <p id="score"></p>
+	    <h2 id=startButton>Start</h2>
+        <p id="timer"></p>
+		<div id="box"><img class="target" src="RapidFireCircle.svg" height="250" width="250" alt="RapidFireTester"></div> 
+        
+        <script>
+            
+             //create variables
+            var timeLeft;
+            var hiscore=0;
+            var score;
+            var elem = document.getElementById("timer");
+            
+            var timerId;
+
+            
+             document.getElementById("startButton").onclick=function() {
+                 timeLeft = 30;
+                 score = 0;
+                 document.getElementById("score").innerHTML="Your Score is: " + score;
+                 makeBox();
+                 timerId = setInterval(countdown, 1000);          
+            }
+             
+		
+			function makeBox() {
+					var time=Math.random();
+					time=time*3000;
+				
+				setTimeout(function() {
+						
+					document.getElementById("box").style.display="block";
+					
+				}, time); 
+			
+			}
+			
+			document.getElementById("box").onclick=function() {
+                score++;
+				document.getElementById("score").innerHTML="Your Score is: " + score;
+                if(hiscore<score)
+                    {
+                        hiscore = score;
+                        document.getElementById("Hiscore").innerHTML="Your High Score is: " + hiscore;
+                    }
+			}
+            
+            function countdown() {
+                if (timeLeft == 0) {
+                    clearTimeout(timerId);
+                    //stop game
+                    elem.innerHTML = "The Time has run out. Click Start To Start again."
+                    document.getElementById("box").style.display="none";
+                } else {
+                    elem.innerHTML = timeLeft + ' seconds remaining';
+                    timeLeft--;
+                }
+            }
+            
+        </script>
+    </body>
+</html>

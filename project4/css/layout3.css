@@ -1,0 +1,46 @@
+/*This imports both the Anton and Open Sans fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans');
+
+
+body {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    color: #eeeeee;
+    background-image: url("overpass.png");
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+    font-size: 45px;
+}
+
+h2{
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    text-align: center
+    border-color: #eeeeee;
+    border-style: solid;
+    border-width: thick; 
+    color: #eeeeee;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+}
+
+#box {
+                padding-top: 50px;
+                margin: auto;
+				width:  250px;
+				height: 250px;
+				display: none;
+				position: relative; 
+		}
+p {
+    font-size: 25px;
+}
