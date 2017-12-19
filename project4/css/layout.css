@@ -106,9 +106,23 @@ a {
     text-align: center;
     border-style:hidden;
 }
+    
+    .item {
+    width: 250px;
+    height: 350px;
+    margin: 40px 20px 40px 20px;
+    text-align: center;
+}
+    
 }
 
-
+p {
+    margin: auto;
+    text-indent: 50px;
+    width: 800px;
+    text-align: left;
+    
+}
 
 /* How to Tutorials */
 #RectionTestDetails{
